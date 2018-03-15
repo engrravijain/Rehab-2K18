@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>REHAB 2K18</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" />
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script> -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+
+	<script type="text/javascript">
+		var deleteLog = false;
+		$(document).ready(function () {
+			$('#pagepiling').pagepiling({
+				menu: '#menu',
+				anchors: ['page1', 'page2', 'page3', 'page4'],
+				sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4', '#bfda00'],
+				navigation : {
+					'tooltips': ['HOME', 'EVENTS', 'STAR NIGHT', 'GALLERY' , 'TEAM', 'ABOUT']
+				},
+				onLeave: function (index, nextIndex, direction) {
+					if (deleteLog) {
+						$('#callbacksDiv').html('');
+					}
+					$('#callbacksDiv').append('<p>onLeave - index:' + index + ' nextIndex:' + nextIndex + ' direction:' + direction + '</p>')
+				},
+				afterRender: function () {
+					$('#callbacksDiv').append('<p>afterRender</p>');
+				},
+				afterLoad: function (anchorLink, index) {
+					//section 2
+					// if (index == 2) {
+					// 	//moving the image
+					// 	$('#section2').find('.eventcard').delay(100).animate({
+					// 		left: '0%'
+					// 	}, 1500, 'easeOutExpo', function () {
+					// 		$('#section2').find('p').first().bounceInLeft(700, function () {
+					// 			$('#section2').find('p').last().bounceInLeft(600);
+					// 		});
+					// 	});
+					// 	// for(var i=1;i<12;i++) {
+					// 	// 		setTimeout(function () {
+					// 	// 			$('#events' + i.toString()).addClass('slideInDown');
+					// 	// 		},500);
+					// 	// }
+					// 	$('#events1').removeClass('slideInDown');
+					// 	$('#events2').removeClass('slideInDown');
+					// 	$('#events3').removeClass('slideInDown');
+					// 	$('#events4').removeClass('slideInDown');
+					// 	$('#events5').removeClass('slideInDown');
+					// 	$('#events6').removeClass('slideInDown');
+					// 	$('#events7').removeClass('slideInDown');
+					// 	$('#events8').removeClass('slideInDown');
+					// 	$('#events9').removeClass('slideInDown');
+					// 	$('#events10').removeClass('slideInDown');
+					// 	$('#events11').removeClass('slideInDown');
+					// 	document.getElementById("event-cardContainer").style.opacity = 0;
+					// 	setTimeout(function () {
+					// 		document.getElementById("event-cardContainer").style.opacity = 1;
+					// 		$('#events1').addClass('slideInDown');
+					// 		setTimeout(function () {
+					// 			$('#events2').addClass('slideInDown');
+					// 			setTimeout(function () {
+					// 				$('#events3').addClass('slideInDown');
+					// 				setTimeout(function () {
+					// 					$('#events4').addClass('slideInDown');
+					// 					setTimeout(function () {
+					// 						$('#events5').addClass('slideInDown');
+					// 						setTimeout(function () {
+					// 							$('#events6').addClass('slideInDown');
+					// 							setTimeout(function () {
+					// 								$('#events7').addClass('slideInDown');
+					// 								setTimeout(function () {
+					// 									$('#events8').addClass('slideInDown');
+					// 									setTimeout(function () {
+					// 										$('#events9').addClass('slideInDown');
+					// 										setTimeout(function () {
+					// 											$('#events10').addClass('slideInDown');
+					// 											setTimeout(function () {
+					// 												$('#events11').addClass('slideInDown');
+					// 											}, 200);
+					// 										}, 200);
+					// 									}, 200);
+					// 								}, 200);
+					// 							}, 200);
+					// 						}, 200);
+					// 					}, 200);
+					// 				}, 200);
+					// 			}, 200);
+					// 		}, 200);
+					// 	}, 200);
+
+					// 	//$('#eventS' + i.toString()).addClass('slideInDown');
+					// }
+					// if (index == 4) {
+					// 	$('.team1').removeClass('bounceInLeft');
+					// 	$('.team2').removeClass('bounceInLeft');
+					// 	$('.team3').removeClass('bounceInLeft');
+					// 	$('.team4').removeClass('bounceInLeft');
+					// 	$('.team5').removeClass('bounceInLeft');
+					// 	$('.team6').removeClass('bounceInLeft');
+					// 	$('.team7').removeClass('bounceInLeft');
+					// 	$('.team8').removeClass('bounceInLeft');
+					// 	$('.team9').removeClass('bounceInLeft');
+					// 	$('.team10').removeClass('bounceInLeft');
+					// 	$('.team11').removeClass('bounceInLeft');
+					// 	$('.team12').removeClass('bounceInLeft');
+					// 	$('.team13').removeClass('bounceInLeft');
+					// 	$('.team14').removeClass('bounceInLeft');
+					// 	$('.team15').removeClass('bounceInLeft');
+					// 	$('.team16').removeClass('bounceInLeft');
+					// 	setTimeout(function () {
+					// 		$('.team1').addClass('bounceInLeft');
+					// 		setTimeout(function () {
+					// 			$('.team2').addClass('bounceInLeft');
+					// 			setTimeout(function () {
+					// 				$('.team3').addClass('bounceInLeft');
+					// 				setTimeout(function () {
+					// 					$('.team4').addClass('bounceInLeft');
+					// 					setTimeout(function () {
+					// 						$('.team5').addClass('bounceInLeft');
+					// 						setTimeout(function () {
+					// 							$('.team6').addClass('bounceInLeft');
+					// 							setTimeout(function () {
+					// 								$('.team7').addClass('bounceInLeft');
+					// 								setTimeout(function () {
+					// 									$('.team8').addClass('bounceInLeft');
+					// 									setTimeout(function () {
+					// 										$('.team9').addClass('bounceInLeft');
+					// 										setTimeout(function () {
+					// 											$('.team10').addClass('bounceInLeft');
+					// 											setTimeout(function () {
+					// 												$('.team11').addClass('bounceInLeft');
+					// 												setTimeout(function () {
+					// 													$('.team12').addClass('bounceInLeft');
+					// 													setTimeout(function () {
+					// 														$('.team13').addClass('bounceInLeft');
+					// 														setTimeout(function () {
+					// 															$('.team14').addClass('bounceInLeft');
+					// 															setTimeout(function () {
+					// 																$('.team15').addClass('bounceInLeft');
+					// 																setTimeout(function () {
+					// 																	$('.team16').addClass('bounceInLeft');
+					// 																}, 200);
+					// 															}, 200);
+					// 														}, 200);
+					// 													}, 200);
+					// 												}, 200);
+					// 											}, 200);
+					// 										}, 200);
+					// 									}, 200);
+					// 								}, 200);
+					// 							}, 200);
+					// 						}, 200);
+					// 					}, 200);
+					// 				}, 200);
+					// 			}, 200);
+					// 		}, 200);
+					// 	}, 200);
+					// }
+					//section 3
+					deleteLog = true;
+			}
+		});
+		});
+	</script>
+	
+    <style>
+    #section2 .intro{
+    	left: -150%;
+		position: relative;
+    }
+    #section2 p{
+    	display: none;
+    }
+    #section3 .intro{
+    	left: 140%;
+		position: relative;
+    }
+    </style>
+
+</head>
+<body>
+	<div class="loader"></div>
+	<div id="pagepiling">
+
+
+		<!-- homepage starts here -->
+
+	    <div class="section" id="section1">
+
+			<div style="height: 3%;display: flex;flex-direction: row;">
+				<a href="#" style="text-align: left;width: 50%;">
+					<img style="max-width: 200px; max-height:75px; margin:10px;" src="./images/logos/sports_board.png">
+				</a>
+				<a href="#" style="text-align: right;width: 50%;">
+					<img style="max-width: 200px; max-height:100px; margin:10px;" src="./images/logos/chitkarablackadj.png">
+				</a>
+			</div>
+			<div class="mainContent">
+				<div class="hideDiv">
+					<h1 style="margin-bottom:170px;" id="rehab">
+						<img style="max-height: 195px; max-width: 375px;"src="./images/logos/isafc.png" alt="">
+					</h1>
+					<p class="element"></p>
+					<iframe style=" margin-bottom: 75px; width:100%;text-align:center;" scrolling="no" src="./flipclock/examples/countdown.html" frameborder="0"></iframe>
+					<br/>
+				</div>
+				<div>
+					<div class="page-wrapper">
+				
+						<a href="#" class="boton trigger">
+							REGISTER
+						</a>
+				
+					</div>
+					<div class="modal-wrapper">
+						<div class="modal" style="left:50%;top:50%;">
+							<!-- <div class="head">
+																			      
+										<a class="btn-close trigger" href="javascript:;"></a>
+																				
+										</div> -->
+							<div class="content">
+								<div class="back"></div>
+								<div class="registration-form">
+									<header style="display: flex;flex-direction: row;">
+										<div class="form-heading" style="width:50%;display: flex;flex-direction: column;">
+											<h1>REGISTRATION FORM</h1>
+											<p>All fields are mandatory</p>
+										</div>
+										<div style="width:50%;text-align: right;">
+											<a class="btn-close trigger" href="javascript:;"></a>
+										</div>
+									</header>
+									<form>
+										<div class="input-section team-leader-section">
+											<input autofocus="autofocus" class="leader" type="text" name="Team Leader" placeholder="FULL NAME" autocomplete="off" onkeypress="checkEnter(event)">
+											<div class="animated-button">
+												<span class="icon-paper-plane">
+													<i class="fa fa-envelope-o"></i>
+												</span>
+												<span class="next-button leader-name">
+													<i class="fa fa-arrow-up"></i>
+												</span>
+											</div>
+										</div>
+										<div class="input-section email-section folded">
+											<input autofocus="autofocus" class="email" type="email" placeholder="EMAIL ID" onkeypress="checkEnter(event)" autocomplete="off"
+											/>
+											<div class="animated-button">
+												<span class="icon-paper-plane">
+													<i class="fa fa-envelope-o"></i>
+												</span>
+												<span class="next-button email">
+													<i class="fa fa-arrow-up"></i>
+												</span>
+											</div>
+										</div>
+										<div class="input-section phone-section folded">
+											<input autofocus="autofocus" class="phone" type="text" placeholder="PHONE NO." onkeypress="checkEnter(event)" />
+											<div class="animated-button">
+												<span class="icon-lock">
+													<i class="fa fa-lock"></i>
+												</span>
+												<span class="next-button phone">
+													<i class="fa fa-arrow-up"></i>
+												</span>
+											</div>
+										</div>
+										<div class="input-section address-section folded">
+											<input autofocus="autofocus" class="address" type="text" placeholder="Address" onkeypress="checkEnter(event)" />
+											<div class="animated-button">
+												<span class="icon-repeat-lock">
+													<i class="fa fa-lock"></i>
+												</span>
+												<span class="next-button address">
+													<i class="fa fa-paper-plane"></i>
+												</span>
+											</div>
+										</div>
+										<div class="input-section event-section folded">
+											<select class="event">
+												<option value="Archery" selected>Archery</option>
+												<option value="Badminton">Badminton</option>
+												<option value="Basketball">Basketball</option>
+												<option value="Chess">Chess</option>
+												<option value="Darts">Darts</option>
+												<option value="Futsal">Futsal</option>
+												<option value="Mini-Golf">Mini-Golf</option>
+												<option value="Badminton">PowerLifting</option>
+												<option value="Table Tennis">Table Tennis</option>
+												<option value="Volleyball">Volleyball</option>
+												<option value="8 Ball Pool">8 Ball Pool</option>
+											</select>
+											<div class="animated-button">
+												<span class="icon-repeat-lock">
+													<i class="fa fa-lock"></i>
+												</span>
+												<span class="next-button event">
+													<i class="fa fa-paper-plane"></i>
+												</span>
+											</div>
+										</div>
+										<div class="input-section gender-section folded">
+											<select class="gender">
+												<option value="Male" selected>Male</option>
+												<option value="Female">Female</option>
+												<option value="Other">Others</option>
+											</select>
+											<div class="animated-button">
+												<span class="icon-repeat-lock">
+													<i class="fa fa-lock"></i>
+												</span>
+												<span class="next-button gender">
+													<i class="fa fa-paper-plane"></i>
+												</span>
+											</div>
+										</div>
+										<div class="success">
+											<p>SUCCESSFULLY REGISTERED FOR REHAB 2K18</p>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="social-links">
+				<a href="#">
+					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/facebook.svg" alt="">
+				</a>
+				<a href="#">
+					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/instagram.svg" alt="">
+				</a>
+				<a href="#">
+					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/twitter.svg" alt="">
+				</a>
+				<a href="#">
+					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/snapchat.svg" alt="">
+				</a>
+			</div>
+			
+		</div>
+		
+		<!-- home page ends here -->
+
+		<!-- events start here -->
+
+	    <div class="section pp-scrollable" id="section2">
+			<section id="events-page">
+				<div style="width:100%; text-align: center;">
+					<h1>EVENTS</h1>
+				</div>
+				<!-- event cards start here -->
+				<div class="event-cards">
+
+					<div id="events1" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/archery.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>ARCHERY</h2>
+									<h4>Open Championship</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											15000
+										</span>
+										<span class="event-cell">
+											10000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.1000
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events2" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/badminton.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>BADMINTON</h2>
+									<h4>OPEN BOYS(T) / GIRLS</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											15000
+										</span>
+										<span class="event-cell">
+											10000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.2500
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events3" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/basketball.jpeg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>BASKETBALL</h2>
+									<h4>Open BOYS / GIRLS</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											20000
+										</span>
+										<span class="event-cell">
+											15000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.3000
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events4" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/cheess.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>CHESS</h2>
+									<h4>Open CHAMPIONSHIP</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											10000
+										</span>
+										<span class="event-cell">
+											5000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.500
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events5" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/darts.png" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>DARTS</h2>
+									<h4>OPEN CHAMIONSHIP</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1500
+										</span>
+										<span class="event-cell">
+											1000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.100
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events6" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/futsal.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>FUTSAL</h2>
+									<h4>Open BOYS / GIRLS</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											20000
+										</span>
+										<span class="event-cell">
+											15000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.2500
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events7" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/minigolf.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>MINI GOLF</h2>
+									<h4>OPEN CHAMPIONSHIP</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1500
+										</span>
+										<span class="event-cell">
+											1000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.100
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events8" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/8ballpool.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>8 BALL POOL</h2>
+									<h4>OPEN CHAMPIONSHIP</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											10000
+										</span>
+										<span class="event-cell">
+											8000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.500
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events9" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/powerlifting.png" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>POWERLIFTING</h2>
+									<h4>OPEN BOYS / GIRLS</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											10000 / 5000
+										</span>
+										<span class="event-cell">
+											8000 / 3000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.500
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events10" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/tabletennis.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>TABLE TENNIS</h2>
+									<h4>OPEN BOYS(T) / GIRLS</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											15000 / 5000
+										</span>
+										<span class="event-cell">
+											10000 / 3000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.2500 / Rs. 500
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="events11" class="event-cardContainer event-inactive animated">
+						<div class="event-card">
+							<div class="event-side front">
+								<div class="event-img event-img1">
+									<img src="./images/events/volleyball.jpg" alt="" class="eventt-img">
+								</div>
+								<div class="event-info">
+									<h2>VOLLEYBALL</h2>
+									<h4>OPEN BOYS / GIRLS</h4>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											1
+											<sup>st</sup> Prize
+										</span>
+										<span class="event-cell">
+											2
+											<sup>nd</sup> Prize
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span class="event-cell">
+											15000
+										</span>
+										<span class="event-cell">
+											10000
+										</span>
+									</div>
+									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
+										<span style="width:100%;text-align:center;margin-top:6px;">
+											Registration fees : Rs.2000
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="event-side event-back">
+								<div class="event-info">
+									<h2>RULES</h2>
+									<ul>
+										<li>Manage backyard gates with ease with the 36" deck option</li>
+										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
+										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+									</ul>
+					
+									<div class="event-btn">
+										<h4>Rule Book</h4>
+										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+											<path d="M0-.25h24v24H0z" fill="none" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<!-- event cards end here -->
+			</section>
+		</div>
+		
+		<!-- events end here -->
+
+		<div class="section" id="section3">
+			
+		</div>
+
+		<div class="section pp-scrollable" id="section6">
+			<div style="width:100%; text-align: center;">
+				<h1>GALLERY</h1>
+			</div>
+
+			<div class="gallery">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/1.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/2.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/3.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/4.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/5.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/7.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/8.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/10.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/11.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/12.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/13.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/15.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/16.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/18.png" alt="">
+				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/19.png" alt="">
+			</div>
+		</div>
+
+		<!-- team page starts here -->
+
+		<div class="section pp-scrollable" id="section4">
+			<section id="team-page">
+				<div style="width:100%; text-align: center;">
+					<h1>Core Team</h1>
+				</div>
+				<div class="profile-cards">
+					<div id="card" class="team1 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Sushant</h4>
+									<h3>Fest Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div> 
+					<div id="card" class="team2 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Heena Babbar</h4>
+									<h3>Fest Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team5 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Rama Shanker</h4>
+									<h3>Secretary</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team6 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Nayamat</h4>
+									<h3>Secretary</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team3 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Nitesh Sood</h4>
+									<h3>Strategy Manager</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team4 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Rishabh Joshi</h4>
+									<h3>Strategy Manager</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team7 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Ravi Jain</h4>
+									<h3>Web Developer</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team8 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Vaibhav</h4>
+									<h3>Web Developer</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team9 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Tanya Kapoor</h4>
+									<h3>Graphics Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team10 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar">
+								<img style="height: inherit;width: inherit;background-size: contain;border-radius: 50%;" src="./images/core/raghavDhawan.jpeg">
+							</div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Raghav Dhawan</h4>
+									<h3>Media Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team11 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Shivam Dheer</h4>
+									<h3>Promotion Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team12 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar">
+								<img style="height: inherit;width: inherit;background-size: contain;border-radius: 50%;" src="./images/core/mohitBali.jpg">
+							</div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Mohit Bali</h4>
+									<h3>Promotion Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team13 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Sanya Kapoor</h4>
+									<h3>Hospitality Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team14 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar">
+								<img style="height: inherit;width: inherit;background-size: contain;border-radius: 50%;" src="./images/core/gagandeepGarg.jpg">
+							</div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Gagandeep Garg</h4>
+									<h3>Hospitality Head
+										<h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team15 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Chanchal Preet</h4>
+									<h3>Discipline Head</h2>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team16 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div id="avatar">
+								<img style="height: inherit;width: inherit;background-size: contain;border-radius: 50%;" src="./images/core/ramanKumar.jpg">
+							</div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Raman Kumar</h4>
+									<h3>Discipline Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+			</section>
+		</div>
+
+		<!-- team page ends here -->
+
+		<div class="section" id="section5">
+			<section id="maps-page">
+				<div id="map-page">
+					<div id="map"></div>
+					<div id="map-content">
+					</div>
+				</div>
+			</section>
+		</div>
+		
+	</div>
+	<script src="./js/index.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyC1OJV-orwAnloDiyO1lSE0oa2K9jBzQ58&v=3&callback=initMap"
+	 async defer onerror="mapError()"></script>
+	 <script>
+		 var typed = new Typed('.element', {
+				strings: ["7 - 9<sup>th</sup> APRIL 2K18"],
+				typeSpeed: 50,
+				loop: true,
+				loopCount: Infinity,
+				smartBackspace: true,
+				backSpeed: 50,
+				showCursor: false,
+			});
+	 </script>
+</body>
+</html>
