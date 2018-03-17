@@ -34,7 +34,7 @@
 				anchors: ['page1', 'page2', 'page3', 'page4'],
 				sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4', '#bfda00'],
 				navigation : {
-					'tooltips': ['HOME', 'EVENTS', 'STAR NIGHT', 'GALLERY' , 'TEAM', 'ABOUT']
+					'tooltips': ['HOME', 'EVENTS', 'STAR NIGHT', 'TEAM', 'ABOUT']
 				},
 				onLeave: function (index, nextIndex, direction) {
 					if (deleteLog) {
@@ -246,6 +246,7 @@
 										<div class="form-heading" style="width:50%;display: flex;flex-direction: column;">
 											<h1>REGISTRATION FORM</h1>
 											<p>All fields are mandatory</p>
+											<!-- <p class="black-colour-email"></p> -->
 										</div>
 										<div style="width:50%;text-align: right;">
 											<a class="btn-close trigger" href="javascript:;"></a>
@@ -253,7 +254,7 @@
 									</header>
 									<form>
 										<div class="input-section team-leader-section">
-											<input autofocus="autofocus" class="leader" type="text" name="Team Leader" placeholder="FULL NAME" autocomplete="off" onkeypress="checkEnter(event)">
+											<input autofocus="on" class="leader" type="text" name="Team Leader" placeholder="FULL NAME" autocomplete="off" onkeypress="checkEnter(event)">
 											<div class="animated-button">
 												<span class="icon-paper-plane">
 													<i class="fa fa-envelope-o"></i>
@@ -298,7 +299,7 @@
 											</div>
 										</div>
 										<div class="input-section event-section folded">
-											<select class="event">
+											<select style="cursor:pointer" class="event">
 												<option value="Archery" selected>Archery</option>
 												<option value="Badminton">Badminton</option>
 												<option value="Basketball">Basketball</option>
@@ -320,8 +321,23 @@
 												</span>
 											</div>
 										</div>
+										<div class="input-section accomodation-section folded">
+											<select style="cursor:pointer" class="accomodation">
+												<option value="Hostels" selected>Hostels</option>
+												<option value="Hotels">Hotels</option>
+												<option value="On your own">On your own</option>
+											</select>
+											<div class="animated-button">
+												<span class="icon-repeat-lock">
+													<i class="fa fa-lock"></i>
+												</span>
+												<span class="next-button accomodation">
+													<i class="fa fa-paper-plane"></i>
+												</span>
+											</div>
+										</div>
 										<div class="input-section gender-section folded">
-											<select class="gender">
+											<select style="cursor:pointer" class="gender">
 												<option value="Male" selected>Male</option>
 												<option value="Female">Female</option>
 												<option value="Other">Others</option>
@@ -1124,7 +1140,7 @@
 					<div id="card" class="team4 animated">
 						<div id="front">
 							<div id="top-pic"></div>
-							<div id="avatar"></div>
+							<div style="background-image: url('./images/team/joshi.jpg');" id="avatar"></div>
 							<div id="info-box">
 								<div class="info">
 									<h4>Rishabh Joshi</h4>
@@ -1189,6 +1205,26 @@
 								<div class="info">
 									<h4>Tanya Kapoor</h4>
 									<h3>Graphics Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team17 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div style="background-image: url('./images/team/sahil.jpg');" id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Sahil Gupta</h4>
+									<h3>Social Media Head</h3>
 								</div>
 							</div>
 							<div id="social-bar">

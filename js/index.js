@@ -238,9 +238,36 @@ $('.next-button.event').click(
             $('.black-colour-email').hide();
             $('.black-colour-email').text("");
             $('.event-section').addClass("fold-up");
-            $('.gender-section').removeClass("folded");
+            $('.accomodation-section').removeClass("folded");
             $('.black-colour-email').show();
-            $('.black-colour-email').text("Select your gender");
+            $('.black-colour-email').text("Select mode of Accomodation");
+        // }
+        // else {
+        //     $('.black-colour-email').hide();
+        //     $('.form-heading').append('<span class="black-colour-email">Select a event</span>')
+        // }
+    }
+);
+
+$('.accomodation').on("change",
+    function () {
+        if ($(this).val()) {
+            $('.icon-repeat-lock').addClass("next");
+        } else {
+            $('.icon-repeat-lock').removeClass("next");
+        }
+    }
+);
+
+$('.next-button.accomodation').click(
+    function () {
+        // if ($('.event:selected').val()) {
+        $('.black-colour-email').hide();
+        $('.black-colour-email').text("");
+        $('.accomodation-section').addClass("fold-up");
+        $('.gender-section').removeClass("folded");
+        $('.black-colour-email').show();
+        $('.black-colour-email').text("Select your gender");
         // }
         // else {
         //     $('.black-colour-email').hide();
@@ -338,6 +365,20 @@ function checkEnter(e) {
                 $('.black-colour-email').hide();
                 $('.black-colour-email').text("");
                 $('.event-section').addClass("fold-up");
+                $('.accomodation-section').removeClass("folded");
+                $('.black-colour-email').show();
+                $('.black-colour-email').text("Select your gender");
+            }
+            else {
+                $('.black-colour-email').hide();
+                $('.form-heading').append('<span class="black-colour-email">Enter a valid address</span>')
+            }
+        }
+        else if ($((e["srcElement"].parentNode)).hasClass('accomodation-section')) {
+            if (e["srcElement"].value) {
+                $('.black-colour-email').hide();
+                $('.black-colour-email').text("");
+                $('.accomodation-section').addClass("fold-up");
                 $('.gender-section').removeClass("folded");
                 $('.black-colour-email').show();
                 $('.black-colour-email').text("Select your gender");
