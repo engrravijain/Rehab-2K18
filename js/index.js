@@ -11,6 +11,58 @@ var re1 = /^ (?=.* [A - Za - z])(?=.*\\d)[A - Za - z\\d^ a - zA - Z0 -9].{ 5, 50
 var alphabets = /^([a-zA-Z]+\s)|([a-zA-Z])/;
 var numbers = /^[0-9]+$/;
 
+var locations = [
+    {
+        title : 'Eagle Hotel , Rajpura' , 
+        location : {
+            lat : 30.486144 , 
+            lng : 76.601802
+        }
+    },
+    {
+        title : 'Mayur Hotel , Rajpura' , 
+        location : {
+            lat : 30.486102 , 
+            lng : 76.600679
+        }
+    },
+    {
+        title : 'Mayur Hotel , Rajpura' , 
+        location : {
+            lat : 30.637781 , 
+            lng : 76.8202445
+        }
+    },
+    {
+        title : 'Park Plaza , Zirakpur' , 
+        location : {
+            lat : 30.637781 , 
+            lng : 76.8202445
+        }
+    },
+    {
+        title : 'Fab Hotel Royal Plaza , Zirakpur' , 
+        location : {
+            lat : 30.6346329 , 
+            lng : 76.8206079
+        }
+    },
+    {
+        title : 'Hotel 6 , Zirakpur' , 
+        location : {
+            lat : 30.6386541 , 
+            lng : 76.8199659
+        }
+    },
+    {
+        title : 'Regenta Almeida , Zirakpur' , 
+        location : {
+            lat : 30.666423 , 
+            lng : 76.812431
+        }
+    }
+];
+
 function initMap() {
     var map;
     map = new google.maps.Map(document.getElementById('map'), {
@@ -18,10 +70,11 @@ function initMap() {
             lat: 30.517632,
             lng: 76.66355
         },
-        zoom: 15
+        zoom: 17
     });
 
     var defaultIcon = makeMarkerIcon('FF0000');
+    var locationIcon = makeMarkerIcon('0000FF');
 
     var bounds = new google.maps.LatLngBounds();
     var positionOFChitkara = {
@@ -35,9 +88,23 @@ function initMap() {
         icon: defaultIcon,
         map: map
     });
-    //     bounds.extend(marker.getPosition());
+    bounds.extend(marker.getPosition());
+    for (var i = 0; i < locations.length; i++) {
+        var position = locations[i].location;
+        var title = locations[i].title;
 
-    // map.fitBounds(bounds);
+        var marker = new google.maps.Marker({
+            position: position,
+            title: title,
+            animation: google.maps.Animation.DROP,
+            id: i,
+            icon: locationIcon,
+            map: map
+        });
+        bounds.extend(marker.getPosition());
+    }
+
+    map.fitBounds(bounds);
 
     function makeMarkerIcon(markerColor) {
         var markerImage = new google.maps.MarkerImage(
