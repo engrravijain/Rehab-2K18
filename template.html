@@ -5,23 +5,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>REHAB 2K18</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" />
-	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
-	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"> -->
 	<link   rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
 	<link   rel="stylesheet" type="text/css" href="examples.css" />
 	<link   rel="stylesheet" type="text/css" href="./css/index.css" />
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 		crossorigin="anonymous">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+		crossorigin="anonymous">
 	<script  src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	 crossorigin="anonymous"></script> -->
-	<link   href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-	 crossorigin="anonymous">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
-
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
 	<script  src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	<script  type="text/javascript" src="jquery.pagepiling.min.js"></script>
 	<script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
@@ -31,152 +22,19 @@
 		$(document).ready(function () {
 			$('#pagepiling').pagepiling({
 				menu: '#menu',
-				anchors: ['page1', 'page2', 'page3', 'page4'],
-				sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4', '#bfda00'],
+				anchors: [],
+				sectionsColor: [],
 				navigation : {
-					'tooltips': ['HOME', 'EVENTS', 'STAR NIGHT', 'TEAM', 'ABOUT']
+					'tooltips': ['Home', 'Events', 'Star Night', 'Reach Us', 'Team']
 				},
 				onLeave: function (index, nextIndex, direction) {
 					if (deleteLog) {
 						$('#callbacksDiv').html('');
 					}
-					$('#callbacksDiv').append('<p>onLeave - index:' + index + ' nextIndex:' + nextIndex + ' direction:' + direction + '</p>')
 				},
 				afterRender: function () {
-					$('#callbacksDiv').append('<p>afterRender</p>');
 				},
 				afterLoad: function (anchorLink, index) {
-					//section 2
-					// if (index == 2) {
-					// 	//moving the image
-					// 	$('#section2').find('.eventcard').delay(100).animate({
-					// 		left: '0%'
-					// 	}, 1500, 'easeOutExpo', function () {
-					// 		$('#section2').find('p').first().bounceInLeft(700, function () {
-					// 			$('#section2').find('p').last().bounceInLeft(600);
-					// 		});
-					// 	});
-					// 	// for(var i=1;i<12;i++) {
-					// 	// 		setTimeout(function () {
-					// 	// 			$('#events' + i.toString()).addClass('slideInDown');
-					// 	// 		},500);
-					// 	// }
-					// 	$('#events1').removeClass('slideInDown');
-					// 	$('#events2').removeClass('slideInDown');
-					// 	$('#events3').removeClass('slideInDown');
-					// 	$('#events4').removeClass('slideInDown');
-					// 	$('#events5').removeClass('slideInDown');
-					// 	$('#events6').removeClass('slideInDown');
-					// 	$('#events7').removeClass('slideInDown');
-					// 	$('#events8').removeClass('slideInDown');
-					// 	$('#events9').removeClass('slideInDown');
-					// 	$('#events10').removeClass('slideInDown');
-					// 	$('#events11').removeClass('slideInDown');
-					// 	document.getElementById("event-cardContainer").style.opacity = 0;
-					// 	setTimeout(function () {
-					// 		document.getElementById("event-cardContainer").style.opacity = 1;
-					// 		$('#events1').addClass('slideInDown');
-					// 		setTimeout(function () {
-					// 			$('#events2').addClass('slideInDown');
-					// 			setTimeout(function () {
-					// 				$('#events3').addClass('slideInDown');
-					// 				setTimeout(function () {
-					// 					$('#events4').addClass('slideInDown');
-					// 					setTimeout(function () {
-					// 						$('#events5').addClass('slideInDown');
-					// 						setTimeout(function () {
-					// 							$('#events6').addClass('slideInDown');
-					// 							setTimeout(function () {
-					// 								$('#events7').addClass('slideInDown');
-					// 								setTimeout(function () {
-					// 									$('#events8').addClass('slideInDown');
-					// 									setTimeout(function () {
-					// 										$('#events9').addClass('slideInDown');
-					// 										setTimeout(function () {
-					// 											$('#events10').addClass('slideInDown');
-					// 											setTimeout(function () {
-					// 												$('#events11').addClass('slideInDown');
-					// 											}, 200);
-					// 										}, 200);
-					// 									}, 200);
-					// 								}, 200);
-					// 							}, 200);
-					// 						}, 200);
-					// 					}, 200);
-					// 				}, 200);
-					// 			}, 200);
-					// 		}, 200);
-					// 	}, 200);
-
-					// 	//$('#eventS' + i.toString()).addClass('slideInDown');
-					// }
-					// if (index == 4) {
-					// 	$('.team1').removeClass('bounceInLeft');
-					// 	$('.team2').removeClass('bounceInLeft');
-					// 	$('.team3').removeClass('bounceInLeft');
-					// 	$('.team4').removeClass('bounceInLeft');
-					// 	$('.team5').removeClass('bounceInLeft');
-					// 	$('.team6').removeClass('bounceInLeft');
-					// 	$('.team7').removeClass('bounceInLeft');
-					// 	$('.team8').removeClass('bounceInLeft');
-					// 	$('.team9').removeClass('bounceInLeft');
-					// 	$('.team10').removeClass('bounceInLeft');
-					// 	$('.team11').removeClass('bounceInLeft');
-					// 	$('.team12').removeClass('bounceInLeft');
-					// 	$('.team13').removeClass('bounceInLeft');
-					// 	$('.team14').removeClass('bounceInLeft');
-					// 	$('.team15').removeClass('bounceInLeft');
-					// 	$('.team16').removeClass('bounceInLeft');
-					// 	setTimeout(function () {
-					// 		$('.team1').addClass('bounceInLeft');
-					// 		setTimeout(function () {
-					// 			$('.team2').addClass('bounceInLeft');
-					// 			setTimeout(function () {
-					// 				$('.team3').addClass('bounceInLeft');
-					// 				setTimeout(function () {
-					// 					$('.team4').addClass('bounceInLeft');
-					// 					setTimeout(function () {
-					// 						$('.team5').addClass('bounceInLeft');
-					// 						setTimeout(function () {
-					// 							$('.team6').addClass('bounceInLeft');
-					// 							setTimeout(function () {
-					// 								$('.team7').addClass('bounceInLeft');
-					// 								setTimeout(function () {
-					// 									$('.team8').addClass('bounceInLeft');
-					// 									setTimeout(function () {
-					// 										$('.team9').addClass('bounceInLeft');
-					// 										setTimeout(function () {
-					// 											$('.team10').addClass('bounceInLeft');
-					// 											setTimeout(function () {
-					// 												$('.team11').addClass('bounceInLeft');
-					// 												setTimeout(function () {
-					// 													$('.team12').addClass('bounceInLeft');
-					// 													setTimeout(function () {
-					// 														$('.team13').addClass('bounceInLeft');
-					// 														setTimeout(function () {
-					// 															$('.team14').addClass('bounceInLeft');
-					// 															setTimeout(function () {
-					// 																$('.team15').addClass('bounceInLeft');
-					// 																setTimeout(function () {
-					// 																	$('.team16').addClass('bounceInLeft');
-					// 																}, 200);
-					// 															}, 200);
-					// 														}, 200);
-					// 													}, 200);
-					// 												}, 200);
-					// 											}, 200);
-					// 										}, 200);
-					// 									}, 200);
-					// 								}, 200);
-					// 							}, 200);
-					// 						}, 200);
-					// 					}, 200);
-					// 				}, 200);
-					// 			}, 200);
-					// 		}, 200);
-					// 	}, 200);
-					// }
-					//section 3
 					deleteLog = true;
 			}
 		});
@@ -199,7 +57,6 @@
 
 </head>
 <body>
-	<div class="loader"></div>
 	<div id="pagepiling">
 
 
@@ -368,9 +225,6 @@
 				</a>
 				<a href="#">
 					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/instagram.svg" alt="">
-				</a>
-				<a href="#">
-					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/twitter.svg" alt="">
 				</a>
 				<a href="#">
 					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/snapchat.svg" alt="">
@@ -1006,32 +860,17 @@
 			
 		</div>
 
-		<!-- <div class="section pp-scrollable" id="section6">
-			<div style="width:100%; text-align: center;">
-				<h1>GALLERY</h1>
-			</div>
-
-			<div class="gallery">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/1.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/2.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/3.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/4.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/5.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/7.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/8.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/9.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/11.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/12.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/13.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/15.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/16.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/18.png" alt="">
-				<img style="max-width:400px; max-height:400px; margin: 15px;" src="./images/gallery/19.png" alt="">
-			</div>
-		</div> -->
+		<div class="section" id="section5">
+			<section id="maps-page">
+				<div id="map-page">
+					<div id="map"></div>
+					<div id="map-content"></div>
+				</div>
+			</section>
+		</div>
 
 		<!-- team page starts here -->
-
+		
 		<div class="section pp-scrollable" id="section4">
 			<section id="team-page">
 				<div style="width:100%; text-align: center;">
@@ -1057,7 +896,7 @@
 								</a>
 							</div>
 						</div>
-					</div> 
+					</div>
 					<div id="card" class="team2 animated">
 						<div id="front">
 							<div id="top-pic"></div>
@@ -1085,26 +924,6 @@
 							<div id="info-box">
 								<div class="info">
 									<h4>Rama Shanker</h4>
-									<h3>Secretary</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team6 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/sushant.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Nayamat</h4>
 									<h3>Secretary</h3>
 								</div>
 							</div>
@@ -1257,150 +1076,146 @@
 								</a>
 							</div>
 						</div>
-						</div>
-						<div id="card" class="team11 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/ravi.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Shivam Dheer</h4>
-										<h3>Promotion Head</h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
+					</div>
+					<div id="card" class="team11 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div style="background-image: url('./images/team/shivam.jpeg');" id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Shivam Dheer</h4>
+									<h3>Promotion Head</h3>
 								</div>
 							</div>
-						</div>
-						<div id="card" class="team12 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/mohit.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Mohit Bali</h4>
-										<h3>Promotion Head</h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
 							</div>
 						</div>
-						<div id="card" class="team13 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/ravi.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Sanya Kapoor</h4>
-										<h3>Hospitality Head</h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
+					</div>
+					<div id="card" class="team12 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div style="background-image: url('./images/team/mohit.jpg');" id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Mohit Bali</h4>
+									<h3>Promotion Head</h3>
 								</div>
 							</div>
-						</div>
-						<div id="card" class="team14 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/gagandeep.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Gagandeep Garg</h4>
-										<h3>Hospitality Head
-											<h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
 							</div>
 						</div>
-						<div id="card" class="team15 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/ravi.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Chanchal Preet</h4>
-										<h3>Discipline Head</h2>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
+					</div>
+					<div id="card" class="team13 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div style="background-image: url('./images/team/sanya.jpg');" id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Sanya Kapoor</h4>
+									<h3>Hospitality Head</h3>
 								</div>
 							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
 						</div>
-						<div id="card" class="team16 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/raman.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Raman Kumar</h4>
-										<h3>Discipline Head</h3>
-									</div>
+					</div>
+					<div id="card" class="team14 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div style="background-image: url('./images/team/gagandeep.jpeg');" id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Gagandeep Garg</h4>
+									<h3>Hospitality Head
+										<h3>
 								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team15 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div style="background-image: url('./images/team/chanchalpreet.jpg');" id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Chanchal Preet</h4>
+									<h3>Discipline Head</h2>
 								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="card" class="team16 animated">
+						<div id="front">
+							<div id="top-pic"></div>
+							<div style="background-image: url('./images/team/raman.jpg');" id="avatar"></div>
+							<div id="info-box">
+								<div class="info">
+									<h4>Raman Kumar</h4>
+									<h3>Discipline Head</h3>
+								</div>
+							</div>
+							<div id="social-bar">
+								<a href="https://www.facebook.com/designcouch" target="_blank">
+									<img class="links-social-bar" src="./images/facebook.svg" alt="">
+								</a>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
+		</div>
 		
-			</section>
+		</section>
 		</div>
-
+		
 		<!-- team page ends here -->
-
-		<div class="section" id="section5">
-			<section id="maps-page">
-				<div id="map-page">
-					<div id="map"></div>
-					<div id="map-content">
-					</div>
-				</div>
-			</section>
-		</div>
 		
 	</div>
+
+
 	<script src="./js/index.js"></script>
+
+	<!-- maps ki script -->
 	<script src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyC1OJV-orwAnloDiyO1lSE0oa2K9jBzQ58&v=3&callback=initMap"
 	  onerror="mapError()"></script>
+	  
+	  <!-- for the date on front page -->
 	 <script>
 		 var typed = new Typed('.element', {
 				strings: ["7 - 9<sup>th</sup> APRIL 2K18"],
@@ -1412,5 +1227,6 @@
 				showCursor: false,
 			});
 	 </script>
+	 
 </body>
 </html>

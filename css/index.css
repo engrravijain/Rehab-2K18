@@ -89,6 +89,11 @@ body, html {
   position: absolute;
   z-index: 1;
 }
+
+#info-box {
+    z-index: -1;
+}
+
 #card #front #info-box {
   height: 60%;
   width: 100%;
@@ -1142,7 +1147,7 @@ svg {
     background-size: 100%;
 }
 
-#section6 {
+#section5 {
     background-image: url('.././images/bg2.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
