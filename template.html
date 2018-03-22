@@ -3,6 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
 	<title>REHAB 2K18</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" />
 	<link   rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
@@ -12,11 +13,12 @@
 		crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
 		crossorigin="anonymous">
-	<script  src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<script  src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	<script  type="text/javascript" src="jquery.pagepiling.min.js"></script>
 	<script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
-
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<script type="text/javascript">
 		var deleteLog = false;
 		$(document).ready(function () {
@@ -25,7 +27,7 @@
 				anchors: [],
 				sectionsColor: [],
 				navigation : {
-					'tooltips': ['Home', 'Events', 'Star Night', 'Reach Us', 'Team']
+					'tooltips': ['Home', 'Events' , 'Reach Us', 'Team']
 				},
 				onLeave: function (index, nextIndex, direction) {
 					if (deleteLog) {
@@ -64,27 +66,29 @@
 
 	    <div class="section" id="section1">
 
-			<div style="height: 3%;display: flex;flex-direction: row;">
+			<div style="height: 10%;display: flex;flex-direction: row;">
 				<a href="#" style="text-align: left;width: 50%;">
-					<img style="max-width: 200px; max-height:75px; margin:10px;" src="./images/logos/sports_board.png">
+					<img id="chitkara" src="./images/logos/chitkarablackadj.png">
+					<img id="rehab" src="./images/logos/rehab.png">
 				</a>
 				<a href="#" style="text-align: right;width: 50%;">
-					<img style="max-width: 200px; max-height:100px; margin:10px;" src="./images/logos/chitkarablackadj.png">
+					<img id="sports-board" src="./images/logos/sports_board.png">
 				</a>
 			</div>
 			<div class="mainContent">
 				<div class="hideDiv">
-					<h1 style="margin-bottom:170px;" id="rehab">
-						<img style="max-height: 195px; max-width: 375px;"src="./images/logos/isafc.png" alt="">
-					</h1>
+					<img id="isafc" src="./images/logos/isafc.png" alt="">
+					<!-- <h1 style="margin-bottom:170px;" id="rehab">
+						
+					</h1> -->
 					<p class="element"></p>
-					<iframe style=" margin-bottom: 75px; width:100%;text-align:center;" scrolling="no" src="./flipclock/examples/countdown.html" frameborder="0"></iframe>
+					<iframe style=" margin-bottom: 75px; width:100%;text-align:center;margin-right: 40px;" scrolling="no" src="./flipclock/examples/countdown.html" frameborder="0"></iframe>
 					<br/>
 				</div>
 				<div>
 					<div class="page-wrapper">
 				
-						<a href="#" class="boton trigger">
+						<a href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="boton trigger">
 							REGISTER
 						</a>
 				
@@ -218,17 +222,23 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="social-links">
-				<a href="#">
-					<img style="max-width: 45px; margin: 3px;"src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDExMi4xOTYgMTEyLjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NiAxMTIuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMzQjU5OTg7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNNzAuMjAxLDU4LjI5NGgtMTAuMDF2MzYuNjcySDQ1LjAyNVY1OC4yOTRoLTcuMjEzVjQ1LjQwNmg3LjIxM3YtOC4zNCAgIGMwLTUuOTY0LDIuODMzLTE1LjMwMywxNS4zMDEtMTUuMzAzTDcxLjU2LDIxLjgxdjEyLjUxaC04LjE1MWMtMS4zMzcsMC0zLjIxNywwLjY2OC0zLjIxNywzLjUxM3Y3LjU4NWgxMS4zMzRMNzAuMjAxLDU4LjI5NHoiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+				<a target="_blank" href="https://www.facebook.com/isafcarnival/">
+					<img style="max-width: 45px; margin: 3px;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDExMi4xOTYgMTEyLjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NiAxMTIuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMzQjU5OTg7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNNzAuMjAxLDU4LjI5NGgtMTAuMDF2MzYuNjcySDQ1LjAyNVY1OC4yOTRoLTcuMjEzVjQ1LjQwNmg3LjIxM3YtOC4zNCAgIGMwLTUuOTY0LDIuODMzLTE1LjMwMywxNS4zMDEtMTUuMzAzTDcxLjU2LDIxLjgxdjEyLjUxaC04LjE1MWMtMS4zMzcsMC0zLjIxNywwLjY2OC0zLjIxNywzLjUxM3Y3LjU4NWgxMS4zMzRMNzAuMjAxLDU4LjI5NHoiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
 					/>
 				</a>
-				<a href="#">
+				<a target="_blank" href="https://www.instagram.com/isafcarnival/">
 					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/instagram.svg" alt="">
 				</a>
-				<a href="#">
+				<a target="_blank" href="https://www.snapchat.com/add/isafc2k18">
 					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/snapchat.svg" alt="">
 				</a>
+				<a id="both" title="Shushant (FEST HEAD) : 7986350238
+Heena Babbar (FEST HEAD) : 9988650057">
+					<!-- <button type="button" data-toggle="modal" data-target="#myModal" style="width:45px;height:45px;background:url('./images/contact.svg')"></button> -->
+					<img style="max-width:45px; max-height:45px; margin:3px" src="./images/contact.svg" alt=""/>
+				</a>				
 			</div>
 			
 		</div>
@@ -264,10 +274,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											15000
+											15000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											10000
+											10000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -279,15 +289,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+									<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+										<span class="glyphicon glyphicon-pencil"></span>
+									</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/open?id=0B2nG3W4nbsqnb3ZVZW9vME5VS0tza3h6LUtoY0NyR2hxNUgw" target="_target" ><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -319,30 +331,32 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											15000
+											15000<sup>*</sup>/5000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											10000
+											10000<sup>*</sup>/3000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span style="width:100%;text-align:center;margin-top:6px;">
-											Registration fees : Rs.2500
+											Registration fees : Rs.2500/500
 										</span>
 									</div>
 								</div>
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+									<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+										<span class="glyphicon glyphicon-pencil"></span>
+									</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/open?id=0B2nG3W4nbsqnN09vX180eV9teHFHeGc2S2R5RERiNG05TXkw" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -374,10 +388,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											20000
+											20000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											15000
+											15000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -389,15 +403,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/open?id=0B2nG3W4nbsqndldUM1dnT21Pb1FGOWpnd2pnWkl5ZHNxSlJR" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -429,10 +445,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											10000
+											10000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											5000
+											5000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -444,15 +460,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2> -->
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
+										<li>3<sup>rd</sup> Prize: 3000<sup>*</sup>/-</li>
+										<li>4<sup>th</sup> Prize: 2000<sup>*</sup>/-</li>
+										<li>5<sup>th</sup> Prize: 1000<sup>*</sup>/-</li>
 									</ul>
-					
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/file/d/0B2nG3W4nbsqncng5THhnVTlBX3FlblNkVTYyT2EwMi1qMU9B/view" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -484,10 +502,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											1500
+											1500<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											1000
+											1000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -499,15 +517,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/open?id=0B2nG3W4nbsqnZmJnYTVILVlNT3FOc0lkMmY1bW5URjV0Zml3" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -539,10 +559,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											20000
+											31000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											15000
+											21000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -554,15 +574,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/open?id=0B2nG3W4nbsqneUEtVmhVcEtZX1UwVkUzR1R4cTQ2Tk5PSXZ3" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -594,10 +616,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											1500
+											1500<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											1000
+											1000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -609,15 +631,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/open?id=0B2nG3W4nbsqnWS1DWlpjanlmWHdkdkdsZmtpYmNOU2dSZFhZ" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -649,10 +673,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											10000
+											10000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											8000
+											8000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -664,15 +688,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/file/d/0B2nG3W4nbsqnYzh4S25yT1RHenk0VG9qZUdXZTFUcFJlSkZj" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -683,7 +709,7 @@
 						</div>
 					</div>
 
-					<div id="events9" class="event-cardContainer event-inactive animated">
+					<!-- <div id="events9" class="event-cardContainer event-inactive animated">
 						<div class="event-card">
 							<div class="event-side front">
 								<div class="event-img event-img1">
@@ -704,10 +730,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											10000 / 5000
+											10000<sup>*</sup> / 5000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											8000 / 3000
+											8000<sup>*</sup> / 3000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -719,15 +745,11 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
-									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/file/d/0B2nG3W4nbsqnVVZlSUlCajRuMlc2QmdtMV9HTHVqcU5zYXZR" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -736,7 +758,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<div id="events10" class="event-cardContainer event-inactive animated">
 						<div class="event-card">
@@ -759,30 +781,32 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											15000 / 5000
+											15000<sup>*</sup> / 5000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											10000 / 3000
+											10000<sup>*</sup> / 3000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span style="width:100%;text-align:center;margin-top:6px;">
-											Registration fees : Rs.2500 / Rs. 500
+											Registration fees : Rs.2000 / Rs. 500
 										</span>
 									</div>
 								</div>
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/file/d/0B2nG3W4nbsqneXpVbXZKUE94QWZ0YmhfYXdXSkRMaDVhQTR3" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -814,10 +838,10 @@
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
 										<span class="event-cell">
-											15000
+											20000<sup>*</sup>
 										</span>
 										<span class="event-cell">
-											10000
+											10000<sup>*</sup>
 										</span>
 									</div>
 									<div class="event-reward" style="height:30px;display:flex;flex-direction:row;">
@@ -829,15 +853,17 @@
 							</div>
 							<div class="event-side event-back">
 								<div class="event-info">
-									<h2>RULES</h2>
+									<!-- <h2>RULES</h2>
 									<ul>
-										<li>Manage backyard gates with ease with the 36" deck option</li>
-										<li>Your choice of deck sizes ranging from 36", 48", 52" and 60"</li>
-										<li>Updated hip bolstering offers superior operator comfort and positioning</li>
-									</ul>
-					
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+					<a style="margin:-25px 0 0 -75px;" href="https://isafcarnival.chitkara.edu.in/register.php" target="_blank" class="btn btn-block btn-primary btn-success">Register
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
 									<div class="event-btn">
-										<h4>Rule Book</h4>
+										<a href="https://drive.google.com/file/d/0B2nG3W4nbsqnMjJfbUI5a0tXSHBpV1ZJdE5sRTJPOGdMbGRF" target="_target"><h4>Rule Book</h4></a>
 										<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
 											<path d="M0-.25h24v24H0z" fill="none" />
@@ -856,16 +882,17 @@
 		
 		<!-- events end here -->
 
-		<div class="section" id="section3">
+		<!-- <div class="section" id="section3">
 			
-		</div>
+		</div> -->
 
-<<<<<<< HEAD
 		<div class="section" id="section5">
 			<section id="maps-page">
 				<div id="map-page">
 					<div id="map"></div>
-					<div id="map-content"></div>
+					<div id="map-content">
+						<h1>Chitkara University</h1>
+					</div>
 				</div>
 			</section>
 		</div>
@@ -873,11 +900,6 @@
 		<!-- team page starts here -->
 		
 		<div class="section pp-scrollable" id="section4">
-=======
-		<!-- team page starts here -->
-
-		<!-- <div class="section pp-scrollable" id="section4">
->>>>>>> 26abaf00cdba583515562492f343fffe6b2677e4
 			<section id="team-page">
 				<div style="width:100%; text-align: center;">
 					<h1>Core Team</h1>
@@ -889,16 +911,19 @@
 							<div style="background-image: url('./images/team/sushant.jpg');" id="avatar"></div>
 							<div id="info-box">
 								<div class="info">
-									<h4>Sushant</h4>
+									<h4>Shushant</h4>
 									<h3>Fest Head</h3>
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
 									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+								<a id="shushant" title="Shushant (FEST HEAD) : 7986350238">
+									<img class="links-social-bar" style="max-width:45px; max-height:45px; margin:3px" src="./images/contact.svg" alt="" />
 								</a>
 							</div>
 						</div>
@@ -914,11 +939,14 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
 									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+								<a id="heena" title="Heena Babbar (FEST HEAD) : 9988650057">
+									<img class="links-social-bar" style="max-width:45px; max-height:45px; margin:3px" src="./images/contact.svg" alt="" />
 								</a>
 							</div>
 						</div>
@@ -934,11 +962,14 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
 									<img class="links-social-bar" src="./images/email.svg" alt="">
+								</a>
+								<a id="rama" title="Rama Shanker (Secretary) : 7009087416">
+									<img class="links-social-bar" style="max-width:45px; max-height:45px; margin:3px" src="./images/contact.svg" alt="" />
 								</a>
 							</div>
 						</div>
@@ -954,7 +985,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -974,7 +1005,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -994,7 +1025,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1014,7 +1045,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1034,7 +1065,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1054,7 +1085,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1074,7 +1105,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1094,7 +1125,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1114,7 +1145,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1134,7 +1165,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1155,7 +1186,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1167,7 +1198,7 @@
 					<div id="card" class="team15 animated">
 						<div id="front">
 							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/chanchalpreet.jpg');" id="avatar"></div>
+							<div style="background-image: url('./images/team/chanchal.jpeg');" id="avatar"></div>
 							<div id="info-box">
 								<div class="info">
 									<h4>Chanchal Preet</h4>
@@ -1175,7 +1206,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1195,7 +1226,7 @@
 								</div>
 							</div>
 							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
+								<a href="#" target="_blank">
 									<img class="links-social-bar" src="./images/facebook.svg" alt="">
 								</a>
 								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
@@ -1207,379 +1238,10 @@
 				</div>
 		</div>
 		
-<<<<<<< HEAD
 		</section>
 		</div>
 		
 		<!-- team page ends here -->
-=======
-			</section>
-		</div> -->
-
-		<!-- team page ends here -->
-
-		<div class="section pp-scrollable" id="section5">
-			<div id="maps-page">
-				<div id="map-page">
-					<div id="map"></div>
-					<div id="map-content">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="section pp-scrollable" id="section4">
-			<section id="team-page">
-				<div style="width:100%; text-align: center;">
-					<h1>Core Team</h1>
-				</div>
-				<div class="profile-cards">
-					<div id="card" class="team1 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/sushant.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Sushant</h4>
-									<h3>Fest Head</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div> 
-					<div id="card" class="team2 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/heena.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Heena Babbar</h4>
-									<h3>Fest Head</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team5 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/rama.jpeg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Rama Shanker</h4>
-									<h3>Secretary</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team6 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/sushant.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Nayamat</h4>
-									<h3>Secretary</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team3 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/nitesh.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Nitesh Sood</h4>
-									<h3>Strategy Manager</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team4 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/joshi.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Rishabh Joshi</h4>
-									<h3>Strategy Manager</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team7 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/ravi.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Ravi Jain</h4>
-									<h3>Web Developer</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team8 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/vaibhav.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Vaibhav</h4>
-									<h3>Web Developer</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team9 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/tanya.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Tanya Kapoor</h4>
-									<h3>Graphics Head</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team17 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/sahil.jpg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Sahil Gupta</h4>
-									<h3>Social Media Head</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div id="card" class="team10 animated">
-						<div id="front">
-							<div id="top-pic"></div>
-							<div style="background-image: url('./images/team/raghav.jpeg');" id="avatar"></div>
-							<div id="info-box">
-								<div class="info">
-									<h4>Raghav Dhawan</h4>
-									<h3>Media Head</h3>
-								</div>
-							</div>
-							<div id="social-bar">
-								<a href="https://www.facebook.com/designcouch" target="_blank">
-									<img class="links-social-bar" src="./images/facebook.svg" alt="">
-								</a>
-								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-									<img class="links-social-bar" src="./images/email.svg" alt="">
-								</a>
-							</div>
-						</div>
-						</div>
-						<div id="card" class="team11 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/ravi.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Shivam Dheer</h4>
-										<h3>Promotion Head</h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div id="card" class="team12 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/mohit.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Mohit Bali</h4>
-										<h3>Promotion Head</h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div id="card" class="team13 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/ravi.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Sanya Kapoor</h4>
-										<h3>Hospitality Head</h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div id="card" class="team14 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/gagandeep.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Gagandeep Garg</h4>
-										<h3>Hospitality Head
-											<h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div id="card" class="team15 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/ravi.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Chanchal Preet</h4>
-										<h3>Discipline Head</h2>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div id="card" class="team16 animated">
-							<div id="front">
-								<div id="top-pic"></div>
-								<div style="background-image: url('./images/team/raman.jpg');" id="avatar"></div>
-								<div id="info-box">
-									<div class="info">
-										<h4>Raman Kumar</h4>
-										<h3>Discipline Head</h3>
-									</div>
-								</div>
-								<div id="social-bar">
-									<a href="https://www.facebook.com/designcouch" target="_blank">
-										<img class="links-social-bar" src="./images/facebook.svg" alt="">
-									</a>
-									<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-										<img class="links-social-bar" src="./images/email.svg" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-		
-			</section>
-		</div>
->>>>>>> 26abaf00cdba583515562492f343fffe6b2677e4
 		
 	</div>
 
@@ -1593,15 +1255,19 @@
 	  <!-- for the date on front page -->
 	 <script>
 		 var typed = new Typed('.element', {
-				strings: ["7 - 9<sup>th</sup> APRIL 2K18"],
+				strings: [" 7 - 9 APRIL 2K18"],
 				typeSpeed: 50,
 				loop: true,
 				loopCount: Infinity,
-				smartBackspace: true,
+				smartBackspace: false,
 				backSpeed: 50,
 				showCursor: false,
 			});
 	 </script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.0/sweetalert2.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.0/sweetalert2.js"></script>
 	 
 </body>
 </html>

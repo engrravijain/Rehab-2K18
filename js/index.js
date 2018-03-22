@@ -2,15 +2,6 @@ mapError = () => {
     window.alert("Failed To Load The Map");
 };
 
-// $(window).load(function () {
-//     $('.loader').fadeOut();
-// });
-
-var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-var re1 = /^ (?=.* [A - Za - z])(?=.*\\d)[A - Za - z\\d^ a - zA - Z0 -9].{ 5, 50 } $/;
-var alphabets = /^([a-zA-Z]+\s)|([a-zA-Z])/;
-var numbers = /^[0-9]+$/;
-
 var locations = [
     {
         title : 'Eagle Hotel , Rajpura' , 
@@ -164,324 +155,52 @@ $('#background').click(function () {
     $('#card').removeClass('flip');
 });
 
-    $('.trigger').click(function () {
-        $('.modal-wrapper').toggleClass('open');
-        $('.page-wrapper').toggleClass('blur');
-        $('.hideDiv').toggleClass('blur');
-        // $('#sectioh1').addClass('blur');
-        // $('.back').addClass('open');
-        // $('.back').attr('style','filter:none;');
+$(".boton").wrapInner('<div class=botontext></div>');
 
-        // return false;
-    });
+$(".botontext").clone().appendTo($(".boton"));
 
+$(".boton").append('<span class="twist"></span><span class="twist"></span><span class="twist"></span><span class="twist"></span>');
 
-$('.leader').on("change keyup paste", function () {
-    if ($(this).val()) {
-        $('.icon-paper-plane').addClass("next");
-    } else {
-        $('.icon-paper-plane').removeClass("next");
-    }
+$(".twist").css("width", "25%").css("width", "+=3px");
+
+$('#shushant').click(function () {
+    swal({
+      title: 'Shushant (FEST HEAD )',
+      text: 'Contact No :- 7986350238',
+      imageUrl: './images/team/sushant.jpg',
+      imageWidth: 300,
+      imageHeight: 300,
+      imageAlt: 'Shushant Image',
+      animation: false
+    })
 });
 
-$('.email').on("change keyup paste",
-    function () {
-        if ($(this).val()) {
-            $('.icon-paper-plane').addClass("next");
-        } else {
-            $('.icon-paper-plane').removeClass("next");
-        }
-    }
-);
+$('#heena').click(function () {
+    swal({
+      title: 'Heena Babbar (FEST HEAD )',
+      text: 'Contact No :- 9988650057',
+      imageUrl: './images/team/heena.jpg',
+      imageWidth: 200,
+      imageHeight: 300,
+      imageAlt: 'Heena Image',
+      animation: false
+    })
+});
 
-$('.next-button').hover(
-    function () {
-        $(this).css('cursor', 'pointer');
-    }
-);
+$('#rama').click(function () {
+    swal({
+      title: 'Rama Shanker (Secretary)',
+      text: 'Contact No :- 7009087416',
+      imageUrl: './images/team/rama.jpeg',
+      imageWidth: 175,
+      imageHeight: 150,
+      imageAlt: 'Rama Image',
+      animation: false
+    })
+});
 
-$('.next-button.email').click(
-    function (e) {
-        if (re.test($('.email').val())) {
-            $('.black-colour-email').hide();
-            $('.black-colour-email').text("");
-            $('.email-section').addClass("fold-up");
-            $('.phone-section').removeClass("folded");
-        }
-        else {
-            $('.black-colour-email').hide();
-            $('.form-heading').append('<span class="black-colour-email">Enter email in the format: abc@xyz.com</span>');
-        }
-    }
-);
-
-$('.next-button.leader-name').click(
-    function () {
-        if (alphabets.test($('.leader').val().trim())) {
-            $('.black-colour-email').hide();
-            $('.black-colour-email').text("");
-            $('.team-leader-section').addClass("fold-up");
-            $('.email-section').removeClass("folded");
-        }
-        else {
-            $('.black-colour-email').hide();
-            $('.form-heading').append('<span class="black-colour-email">Enter alphabets only</span>')
-        }
-    }
-);
-
-$('.phone').on("change keyup paste",
-    function () {
-        if ($(this).val()) {
-            $('.icon-lock').addClass("next");
-        } else {
-            $('.icon-lock').removeClass("next");
-        }
-    }
-);
-
-$('.next-button').hover(
-    function () {
-        $(this).css('cursor', 'pointer');
-    }
-);
-
-$('.next-button.phone').click(
-    function () {
-        var val = $('.phone').val();
-        if (numbers.test(val) && val.length === 10) {
-            $('.black-colour-email').hide();
-            $('.black-colour-email').text("");
-            $('.phone-section').addClass("fold-up");
-            $('.address-section').removeClass("folded");
-        }
-        else {
-            $('.black-colour-email').hide();
-            $('.form-heading').append('<span class="black-colour-email">Enter 10 digit phone number</span>')
-        }
-    }
-);
-
-$('.address').on("change keyup paste",
-    function () {
-        if ($(this).val()) {
-            $('.icon-repeat-lock').addClass("next");
-        } else {
-            $('.icon-repeat-lock').removeClass("next");
-        }
-    }
-);
-
-$('.next-button.address').click(
-    function () {
-        if ($('.address').val().length > 0) {
-            $('.black-colour-email').hide();
-            $('.black-colour-email').text("");
-            $('.address-section').addClass("fold-up");
-            $('.event-section').removeClass('folded');
-            $('.black-colour-email').show();
-            $('.black-colour-email').text("Select your event");
-        }
-        else {
-            $('.black-colour-email').hide();
-            $('.form-heading').append('<span class="black-colour-email">Enter a valid address</span>')
-        }
-    }
-);
-
-$('.event').on("change",
-    function () {
-        if ($(this).val()) {
-            $('.icon-repeat-lock').addClass("next");
-        } else {
-            $('.icon-repeat-lock').removeClass("next");
-        }
-    }
-);
-
-$('.next-button.event').click(
-    function () {
-        // if ($('.event:selected').val()) {
-            $('.black-colour-email').hide();
-            $('.black-colour-email').text("");
-            $('.event-section').addClass("fold-up");
-            $('.accomodation-section').removeClass("folded");
-            $('.black-colour-email').show();
-            $('.black-colour-email').text("Select mode of Accomodation");
-        // }
-        // else {
-        //     $('.black-colour-email').hide();
-        //     $('.form-heading').append('<span class="black-colour-email">Select a event</span>')
-        // }
-    }
-);
-
-$('.accomodation').on("change",
-    function () {
-        if ($(this).val()) {
-            $('.icon-repeat-lock').addClass("next");
-        } else {
-            $('.icon-repeat-lock').removeClass("next");
-        }
-    }
-);
-
-$('.next-button.accomodation').click(
-    function () {
-        // if ($('.event:selected').val()) {
-        $('.black-colour-email').hide();
-        $('.black-colour-email').text("");
-        $('.accomodation-section').addClass("fold-up");
-        $('.gender-section').removeClass("folded");
-        $('.black-colour-email').show();
-        $('.black-colour-email').text("Select your gender");
-        // }
-        // else {
-        //     $('.black-colour-email').hide();
-        //     $('.form-heading').append('<span class="black-colour-email">Select a event</span>')
-        // }
-    }
-);
-
-$('.gender').on("change",
-    function () {
-        if ($(this).val()) {
-            $('.icon-repeat-lock').addClass("next");
-        } else {
-            $('.icon-repeat-lock').removeClass("next");
-        }
-    }
-);
-
-$('.next-button.gender').click(
-    function () {
-            $('.black-colour-email').hide();
-            $('.black-colour-email').text("");
-            $('.gender-section-section').addClass("fold-up");
-            $('.success').attr('style', 'margin-top:0;');
-            $('.black-colour-email').hide();
-            $('.form-heading').append('<span class="black-colour-email"></span>')
-    }
-);
-
-function checkEnter(e) {
-    // if(e.keyCode === 13) {
-    //     if(!$(e["srcElement"].parentNode).hasClass('folded')) {
-    //         if($(e["srcElement"].parentNode).is(':visible')) {
-    //           if(e["srcElement"].value.indexOf('@') >=0) {
-    //                 $('.email-section').addClass("fold-up");
-    //                 $('.password-section').removeClass("folded");
-    //           }
-    //         } 
-    //     }     
-    // }
-    if (e.keyCode === 13) {
-        if ($(e["srcElement"].parentNode).hasClass('email-section')) {
-            if (re.test(e["srcElement"].value)) {
-                $('.black-colour-email').hide();
-                $('.black-colour-email').text("");
-                $('.email-section').addClass("fold-up");
-                $('.phone-section').removeClass("folded");
-            }
-            else {
-                $('.black-colour-email').hide();
-                $('.form-heading').append('<span class="black-colour-email">Enter email in the format: abc@xyz.com</span>')
-                //window.alert("Enter email in the format: abc@xyz.com");
-            }
-        }
-        else if ($((e["srcElement"].parentNode)).hasClass('team-leader-section')) {
-            if (alphabets.test(e["srcElement"].value)) {
-                $('.black-colour-email').hide();
-                $('.black-colour-email').text("");
-                $('.team-leader-section').addClass("fold-up");
-                $('.email-section').removeClass("folded");
-            }
-            else {
-                $('.black-colour-email').hide();
-                $('.form-heading').append('<span class="black-colour-email">Enter alphabets only</span>')
-            }
-        }
-        else if ($((e["srcElement"].parentNode)).hasClass('phone-section')) {
-            if (numbers.test(e["srcElement"].value) && e["srcElement"].value.length === 10) {
-                $('.black-colour-email').hide();
-                $('.black-colour-email').text("");
-                $('.phone-section').addClass("fold-up");
-                $('.address-section').removeClass("folded");
-            }
-            else {
-                $('.black-colour-email').hide();
-                $('.form-heading').append('<span class="black-colour-email">Enter 10 digit phone number</span>')
-            }
-        }
-        else if ($((e["srcElement"].parentNode)).hasClass('address-section')) {
-            if (e["srcElement"].value.length > 0) {
-                $('.black-colour-email').hide();
-                $('.black-colour-email').text("");
-                $('.address-section').addClass("fold-up");
-                $('.event-section').removeClass('folded');
-                $('.black-colour-email').show();
-                $('.black-colour-email').text("Select your event");
-            }
-            else {
-                $('.black-colour-email').hide();
-                $('.form-heading').append('<span class="black-colour-email">Enter a valid address</span>')
-            }
-        }
-        else if ($((e["srcElement"].parentNode)).hasClass('event-section')) {
-            if (e["srcElement"].value) {
-                $('.black-colour-email').hide();
-                $('.black-colour-email').text("");
-                $('.event-section').addClass("fold-up");
-                $('.accomodation-section').removeClass("folded");
-                $('.black-colour-email').show();
-                $('.black-colour-email').text("Select your gender");
-            }
-            else {
-                $('.black-colour-email').hide();
-                $('.form-heading').append('<span class="black-colour-email">Enter a valid address</span>')
-            }
-        }
-        else if ($((e["srcElement"].parentNode)).hasClass('accomodation-section')) {
-            if (e["srcElement"].value) {
-                $('.black-colour-email').hide();
-                $('.black-colour-email').text("");
-                $('.accomodation-section').addClass("fold-up");
-                $('.gender-section').removeClass("folded");
-                $('.black-colour-email').show();
-                $('.black-colour-email').text("Select your gender");
-            }
-            else {
-                $('.black-colour-email').hide();
-                $('.form-heading').append('<span class="black-colour-email">Enter a valid address</span>')
-            }
-        }
-        else if ($((e["srcElement"].parentNode)).hasClass('gender-section')) {
-            if (e["srcElement"].value) {
-                $('.black-colour-email').hide();
-                $('.black-colour-email').text("");
-                $('.gender-section-section').addClass("fold-up");
-                $('.success').attr('style', 'margin-top:0;');
-            }
-            else {
-                $('.black-colour-email').hide();
-                $('.form-heading').append('<span class="black-colour-email">Enter a valid address</span>')
-            }
-        }
-    }
-
-}
-
-    $(".boton").wrapInner('<div class=botontext></div>');
-
-    $(".botontext").clone().appendTo($(".boton"));
-
-    $(".boton").append('<span class="twist"></span><span class="twist"></span><span class="twist"></span><span class="twist"></span>');
-
-    $(".twist").css("width", "25%").css("width", "+=3px");
-
-$('.btn-close').click(function () {
-    $('.modal-wrapper.open').attr('style', 'visibility:none;')
-    // $('.blur').attr('style', 'filter:none;');
-    $('.pp-tablecell').toggleClass('blur');
-    $('.hideDiv').removeClass('blur');
+$('#both').click(function () {
+    swal({
+        html : '<span>Shushant (FEST HEAD) Contact No :- 7986350238</span><br><span>Heena Babbar (FEST HEAD) Contact No :- 9988650057</span>'
+    })
 });
